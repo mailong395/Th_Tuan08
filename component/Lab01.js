@@ -39,7 +39,7 @@ export default function Lab01() {
         </TouchableOpacity>
         <TouchableOpacity title="Fade Out View" onPress={faceOut}>
           <View style={styles.button}>
-            <Text>Show Logo Animation</Text>
+            <Text>Hiden Logo Animation</Text>
           </View>
         </TouchableOpacity>
       </View>

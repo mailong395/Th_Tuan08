@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 
-export default function Lab02() {
+export default function Lab03() {
   const faceAnim = useRef(new Animated.Value(0)).current;
 
   const moveToLeft = () => {
@@ -26,6 +26,10 @@ export default function Lab02() {
     }).start();
   };
 
+  const stopAnim = () => {
+    Animated.timing(faceAnim).stop();
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.section}>
@@ -42,6 +46,11 @@ export default function Lab02() {
         <TouchableOpacity onPress={returnAnim}>
           <View style={styles.button}>
             <Text>Move to left</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={stopAnim}>
+          <View style={styles.button}>
+            <Text>Stop</Text>
           </View>
         </TouchableOpacity>
       </View>
